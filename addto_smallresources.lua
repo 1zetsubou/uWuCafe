@@ -157,6 +157,21 @@ RegisterNetEvent("consumables:client:uwuchocsandy", function(itemName)
     end)
 end)
 
+--update event below to use the "uwusandy" emote to change the prop
+
+RegisterNetEvent("consumables:client:EatPancakes", function(itemName)
+    TriggerEvent('animations:client:EmoteCommandStart', {"uwusandy"})
+    QBCore.Functions.Progressbar("eat_something", "MmmmMMmmmm", 6500, false, true, {
+        disableMovement = false,
+        disableCarMovement = false,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function() -- Done
+        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[itemName], "remove")
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        TriggerServerEvent("QBCore:Server:SetMetaData", "hunger", QBCore.Functions.GetPlayerData().metadata["hunger"] + ConsumeablesEat[itemName])
+    end)
+end)
 
 -- Add to qb-smallresources/config.lua under ConsumablesEat
 
