@@ -7,7 +7,7 @@ RegisterServerEvent("qb-uwu:bill:player", function(playerId, amount)
     local amount = tonumber(amount)
     if biller.PlayerData.job.name == 'uwu' then
         if billed ~= nil then
-            if biller.PlayerData.citizenid ~= billed.PlayerData.citizenid then
+            if biller.PlayerData.citizenid == billed.PlayerData.citizenid then
                 if amount and amount > 0 then
                     MySQL.Async.insert('INSERT INTO phone_invoices (citizenid, amount, society, sender) VALUES (:citizenid, :amount, :society, :sender)',
                     {
@@ -68,11 +68,11 @@ end)
 QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientPancake', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local water = Ply.Functions.GetItemByName("milk")
+    local milkcarton = Ply.Functions.GetItemByName("milkcarton")
     local flour = Ply.Functions.GetItemByName("flour")
     local egg = Ply.Functions.GetItemByName("egg")
     local cheese = Ply.Functions.GetItemByName("cheese")
-    if milk ~= nil and flour ~= nil and egg ~= nil and cheese ~= nil then
+    if milkcarton ~= nil and flour ~= nil and egg ~= nil and cheese ~= nil then
         cb(true)
     else
         cb(false)
@@ -131,8 +131,8 @@ QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientCupcake', function(
     local rawsugar = Ply.Functions.GetItemByName("rawsugar")
     local egg = Ply.Functions.GetItemByName("egg")
     local flour = Ply.Functions.GetItemByName("flour")
-    local milk = Ply.Functions.GetItemByName("milk")
-    if rawsugar ~= nil and egg ~= nil and flour ~= nil and milk ~= nil then
+    local milkcarton = Ply.Functions.GetItemByName("milkcarton")
+    if rawsugar ~= nil and egg ~= nil and flour ~= nil and milkcarton ~= nil then
         cb(true)
     else
         cb(false)
@@ -177,9 +177,9 @@ QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientvSandwich', functio
     local rawsugar = Ply.Functions.GetItemByName("rawsugar")
     local egg = Ply.Functions.GetItemByName("egg")
     local flour = Ply.Functions.GetItemByName("flour")
-    local milk = Ply.Functions.GetItemByName("milk")
+    local milkcarton = Ply.Functions.GetItemByName("milkcarton")
     local vanillabean = Ply.Functions.GetItemByName("vanillabean")
-    if rawsugar ~= nil and egg ~= nil and flour ~= nil and milk ~= nil and vanillabean ~= nil then
+    if rawsugar ~= nil and egg ~= nil and flour ~= nil and milkcarton ~= nil and vanillabean ~= nil then
         cb(true)
     else
         cb(false)
@@ -193,9 +193,9 @@ QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientcSandwich', functio
     local rawsugar = Ply.Functions.GetItemByName("rawsugar")
     local egg = Ply.Functions.GetItemByName("egg")
     local flour = Ply.Functions.GetItemByName("flour")
-    local milk = Ply.Functions.GetItemByName("milk")
+    local milkcarton = Ply.Functions.GetItemByName("milkcarton")
     local chocolate = Ply.Functions.GetItemByName("chocolate")
-    if rawsugar ~= nil and egg ~= nil and flour ~= nil and milk ~= nil and chocolate ~= nil then
+    if rawsugar ~= nil and egg ~= nil and flour ~= nil and milkcarton ~= nil and chocolate ~= nil then
         cb(true)
     else
         cb(false)

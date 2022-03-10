@@ -133,7 +133,7 @@ label = "Cold Store",
             slot = 16,
         },
         [17] = {
-            name = "milk",
+            name = "milkcarton",
             price = 2,
             amount = 20,
             info = {},

@@ -255,7 +255,7 @@ RegisterNetEvent('uwu:pancake', function(data)
         },
         {
             header = "• Pancakes",
-            txt = "Milk, egg, Cheese and Flour",
+            txt = "Milk, Egg, Cheese and Flour",
             params = {
                 event = "qb-uwu:pancake"
             }
@@ -382,7 +382,7 @@ RegisterNetEvent('uwu:DrinkMenu', function(data)
             txt = "Water, Tea, BlueBerry Essence and Tapioka Balls",
             params = {
                 event = "qb-uwu:bbtea"
-            }
+            } 
         },
         {
             header = "• Rose Bubble Tea",

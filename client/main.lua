@@ -181,13 +181,13 @@ RegisterNetEvent("qb-uwu:misoSoup", function()
 	end
 end)
 
--- Pancake (flour + egg + milk cheese)
+-- Pancake (flour + egg + milkcarton cheese)
 
 RegisterNetEvent("qb-uwu:pancake", function()
 	if onDuty then
 		QBCore.Functions.TriggerCallback('qb-uwu:server:get:ingredientPancake', function(HasItems)
 			if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making Pancakies..", 4000, false, true, {
+				QBCore.Functions.Progressbar("pickup_sla", "Making Pancakes..", 4000, false, true, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -197,7 +197,7 @@ RegisterNetEvent("qb-uwu:pancake", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "milk", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "milkcarton", 1)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "egg", 1)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "cheese", 1)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "flour", 1)
@@ -286,7 +286,7 @@ RegisterNetEvent("qb-uwu:rosetea", function()
 	end
 end)
 
--- Mint Bubbletea (tea + milk + uwumintessence + tapiokaballs)
+-- Mint Bubbletea (tea + milkcartoncarton + uwumintessence + tapiokaballs)
 
 RegisterNetEvent("qb-uwu:minttea", function()
 	if onDuty then
@@ -321,7 +321,7 @@ RegisterNetEvent("qb-uwu:minttea", function()
 	end
 end)
 
--- Cupcakes (rawsugar + milk + egg + flour)
+-- Cupcakes (rawsugar + milkcartoncarton + egg + flour)
 
 RegisterNetEvent("qb-uwu:cupcake", function()
 	if onDuty then
@@ -337,7 +337,7 @@ RegisterNetEvent("qb-uwu:cupcake", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "milk", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "milkcarton", 1)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "egg", 1)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "rawsugar", 1)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "flour", 1)
@@ -425,7 +425,7 @@ RegisterNetEvent("qb-uwu:CreateBudhabowl", function()
 	end
 end)
 
--- Vanilla Sandwich (Milk flour rawsugar egg vanillabean [these will change])
+-- Vanilla Sandwich (Milkcarton flour rawsugar egg vanillabean [these will change])
 
 RegisterNetEvent("qb-uwu:vSandwich", function()
 	if onDuty then
@@ -441,7 +441,7 @@ RegisterNetEvent("qb-uwu:vSandwich", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "milk", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "milkcarton", 1)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "flour", 1)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "rawsugar", 1)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "egg", 1)
@@ -461,7 +461,7 @@ RegisterNetEvent("qb-uwu:vSandwich", function()
 	end
 end)
 
--- Chocolate Sandwich (Milk flour rawsugar egg chocolate [these will change])
+-- Chocolate Sandwich (Milkcarton flour rawsugar egg chocolate [these will change])
 
 RegisterNetEvent("qb-uwu:cSandwich", function()
 	if onDuty then
@@ -477,7 +477,7 @@ RegisterNetEvent("qb-uwu:cSandwich", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "milk", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "milkcarton", 1)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "flour", 1)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "rawsugar", 1)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "egg", 1)
