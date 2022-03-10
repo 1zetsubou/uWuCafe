@@ -173,6 +173,7 @@ RegisterNetEvent("consumables:client:EatPancakes", function(itemName)
     end)
 end)
 
+
 -- Add to qb-smallresources/config.lua under ConsumablesEat
 
 -- UwU
