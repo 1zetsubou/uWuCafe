@@ -260,5 +260,13 @@ label = "Cold Store",
             type = "item",
             slot = 32,
         },
+        [33] = {
+            name = "cheese",
+            price = 2,
+            amount = 20,
+            info = {},
+            type = "item",
+            slot = 33,
+        },
     }
 }
